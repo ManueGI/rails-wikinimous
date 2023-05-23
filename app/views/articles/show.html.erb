@@ -1,0 +1,17 @@
+<div class="container middle">
+  <div class="d-flex m-3">
+  <h2><%= @article.title %></h2>
+  <%= link_to article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+    <i class="fa-solid fa-trash fs-6 m-1"></i>
+    <% end %>
+
+  <%= link_to edit_article_path(@article) do%>
+    <i class="fa-solid fa-pencil fs-6 m-1 "></i>
+    <% end %>
+  </div>
+
+  <p class="fs-5 m-3"><%= @article.content %></p>
+
+  <%= link_to "back", articles_path, :class => "fs-6 m-3"%>
+
+</div>

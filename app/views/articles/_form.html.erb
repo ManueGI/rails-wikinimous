@@ -1,0 +1,10 @@
+<div class="container middle w-20">
+<%= form_with model: article, class:"w-70 m-5 p-5" do |f| %>
+  <%= f.label :title  %>
+  <%= f.text_field :title, class:"form-control"  %>
+  <%= f.label :content  %>
+  <%= f.text_area :content, class:"form-control area"  %>
+  <%= f.submit "update article", class:"btn btn-primary"  %>
+<% end %>
+
+</div>
